@@ -1,0 +1,7 @@
+/bitrix/
+/.access.php
+.htaccess
+/urlrewrite.php
+/.idea/
+/favicon.ico
+tmp/
