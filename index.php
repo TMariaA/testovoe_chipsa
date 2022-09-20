@@ -5,8 +5,8 @@ global $APPLICATION;
 $APPLICATION->SetTitle("");
 $sortField = 'ID'; // поле сортировки по умолчанию
 $sortOrder = 'ASC'; // направление сортировки по умолчанию
-$iblockType = "news"; // тип инфоблока
-$iblockCode= "news_chipsa"; // код инфоблока
+$iblockType = "chipsa_test_news"; // тип инфоблока
+$iblockCode= "chipsa_test_news"; // код инфоблока
 $iblockId = \Bitrix\Iblock\IblockTable::getList(['filter'=>['CODE'=>$iblockCode]])->Fetch()["ID"]; // получаем Id для комплексного компонента
 ?>
 <?$APPLICATION->IncludeComponent("test:menu_section", ".default",// подключение меню по разделам

@@ -18,8 +18,8 @@ class Test_Chipsa_cat20220920000309 extends Version
         $helper = $this->getHelperManager();
 
         $iblockId = $helper->Iblock()->getIblockIdIfExists(
-            'news_chipsa',
-            'news'
+            'chipsa_test_news',
+            'chipsa_test_news'
         );
 
         $helper->Iblock()->addSectionsFromTree(

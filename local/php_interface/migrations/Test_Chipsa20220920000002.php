@@ -17,7 +17,7 @@ class Test_Chipsa20220920000002 extends Version
     {
         $helper = $this->getHelperManager();
         $helper->Iblock()->saveIblockType(array (
-  'ID' => 'news',
+  'ID' => 'chipsa_test_news',
   'SECTIONS' => 'Y',
   'EDIT_FILE_BEFORE' => '',
   'EDIT_FILE_AFTER' => '',
@@ -27,28 +27,28 @@ class Test_Chipsa20220920000002 extends Version
   array (
     'ru' => 
     array (
-      'NAME' => 'Новости',
+      'NAME' => 'Новости_chipsa',
       'SECTION_NAME' => '',
       'ELEMENT_NAME' => '',
     ),
     'en' => 
     array (
-      'NAME' => 'news',
+      'NAME' => 'chipsa_test_news',
       'SECTION_NAME' => '',
       'ELEMENT_NAME' => '',
     ),
   ),
 ));
         $iblockId = $helper->Iblock()->saveIblock(array (
-  'IBLOCK_TYPE_ID' => 'news',
+  'IBLOCK_TYPE_ID' => 'chipsa_test_news',
   'LID' => 
   array (
     0 => 's1',
   ),
-  'CODE' => 'news_chipsa',
+  'CODE' => 'chipsa_test_news',
   'API_CODE' => NULL,
   'REST_ON' => 'N',
-  'NAME' => 'Новости',
+  'NAME' => 'Новости_chipsa',
   'ACTIVE' => 'Y',
   'SORT' => '500',
   'LIST_PAGE_URL' => '#SITE_DIR#/',
