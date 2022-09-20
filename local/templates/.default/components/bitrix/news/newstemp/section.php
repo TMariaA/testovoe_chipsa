@@ -53,7 +53,7 @@ $this->setFrameMode(true);
 ?>
 <br />
 <?endif?>
-<?if (
+<?if (//фильтрация по алфавиту и по дате создания
     isset($_GET["sort"]) && isset($_GET["method"]) && (
         $_GET["sort"] == "name" ||
         $_GET["sort"] == "DATE_CREATE")){

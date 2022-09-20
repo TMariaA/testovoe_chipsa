@@ -12,9 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc as Loc;
-Loc::loadMessages(__FILE__);
+Loc::loadMessages(__FILE__);//фильтрация по алфавиту и по дате создания
 ?>
-<p class="sort">Сортировка:
+<p class="sort"><?=Loc::getMessage("SORT");?>
     <a <?if ($_GET["sort"] == "name"):?> class="active" <?endif;?>
             href="?sort=name&method=asc"><?=Loc::getMessage("SORT_NAME_ASC");?></a>
     <a <?if ($_GET["sort"] == "name"):?> class="active" <?endif;?>
