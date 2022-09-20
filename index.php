@@ -133,5 +133,6 @@ if (
 	),
 	false
 );?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
 </div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+

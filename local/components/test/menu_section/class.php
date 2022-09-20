@@ -6,7 +6,7 @@ class menuSection extends CBitrixComponent
     {
         $rsParentSection = CIBlockSection::GetList(
             ['name' => 'asc'],
-            ['IBLOCK_TYPE'=>$arParams["IBLOCK_TYPE"],'IBLOCK_CODE' => $arParams["IBLOCK_CODE"], 'ACTIVE' => 'Y']
+            ['IBLOCK_TYPE'=>$this->arParams["IBLOCK_TYPE"],'IBLOCK_CODE' => $this->arParams["IBLOCK_CODE"], 'ACTIVE' => 'Y']
         );
         while ($arParentSection = $rsParentSection->GetNext())
         {
