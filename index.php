@@ -17,20 +17,20 @@ $iblockId = \Bitrix\Iblock\IblockTable::getList(['filter'=>['CODE'=>$iblockCode]
 );
 ?>
 <?
-// нужно для сортировки по гет параметру
+// нужно для сортировки
 if (
-	isset($_GET["sort"]) && isset($_GET["method"]) && (
-		$_GET["sort"] == "name" ||
-		$_GET["sort"] == "DATE_CREATE")){
-	$sortField = $_GET["sort"];
-	$sortOrder = $_GET["method"];
-}
+	isset($_REQUEST["sort"]) && isset($_REQUEST["method"]) && (
+        $_REQUEST["sort"] == "name" ||
+        $_REQUEST["sort"] == "DATE_CREATE")){
 
+	$sortField = $_REQUEST["sort"];
+	$sortOrder = $_REQUEST["method"];
+}
 ?>
 <div style="display: flex;
 	flex-direction: column;
 	text-align: center;">
-<?$APPLICATION->IncludeComponent(//стили для выравнивания по центру , подключение компонента новостей
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"newstemp", 
 	array(
@@ -40,7 +40,7 @@ if (
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_STYLE" => "N",
 		"BROWSER_TITLE" => "-",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "N",
@@ -81,7 +81,7 @@ if (
 		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => $iblockId,
-		"IBLOCK_TYPE" => "news",
+		"IBLOCK_TYPE" => "test",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "j F Y",
 		"LIST_FIELD_CODE" => array(

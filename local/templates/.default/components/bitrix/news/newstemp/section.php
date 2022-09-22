@@ -54,11 +54,11 @@ $this->setFrameMode(true);
 <br />
 <?endif?>
 <?if (//фильтрация по алфавиту и по дате создания
-    isset($_GET["sort"]) && isset($_GET["method"]) && (
-        $_GET["sort"] == "name" ||
-        $_GET["sort"] == "DATE_CREATE")){
-    $arParams["ELEMENT_SORT_FIELD"] = $_GET["sort"];
-    $arParams["ELEMENT_SORT_ORDER"] = $_GET["method"];
+    isset($_REQUEST["sort"]) && isset($_REQUEST["method"]) && (
+        $_REQUEST["sort"] == "name" ||
+        $_REQUEST["sort"] == "DATE_CREATE")){
+    $_REQUEST["ELEMENT_SORT_FIELD"] = $_REQUEST["sort"];
+    $_REQUEST["ELEMENT_SORT_ORDER"] = $_REQUEST["method"];
 }?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",

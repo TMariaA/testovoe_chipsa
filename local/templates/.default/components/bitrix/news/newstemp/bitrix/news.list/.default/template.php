@@ -14,18 +14,13 @@ $this->setFrameMode(true);
 use Bitrix\Main\Localization\Loc as Loc;
 Loc::loadMessages(__FILE__);//фильтрация по алфавиту и по дате создания
 ?>
-<p class="sort"><?=Loc::getMessage("SORT");?>
-    <a <?if ($_GET["sort"] == "name"):?> class="active" <?endif;?>
-            href="?sort=name&method=asc"><?=Loc::getMessage("SORT_NAME_ASC");?></a>
-    <a <?if ($_GET["sort"] == "name"):?> class="active" <?endif;?>
-            href="?sort=name&method=desc"><?=Loc::getMessage("SORT_NAME_ASC");?></a>
-    <a <?if ($_GET["sort"] == "DATE_CREATE"):?> class="active" <?endif;?>
-            href="?sort=DATE_CREATE&method=desc"><?=Loc::getMessage("SORT_DATE_DESC");?></a>
-    <a <?if ($_GET["sort"] == "DATE_CREATE"):?> class="active" <?endif;?>
-            href="?sort=DATE_CREATE&method=asc"><?=Loc::getMessage("SORT_DATE_ASC");?></a>
-
+<p class="sort" ><?=Loc::getMessage("SORT");?>
+    <a class="active button-sort" data-sort = "name" data-method ="asc" ><?=Loc::getMessage("SORT_NAME_ASC");?></a>
+    <a class="active button-sort" data-sort = "name" data-method ="desc" ><?=Loc::getMessage("SORT_NAME_DESC");?></a>
+    <a class="active button-sort" data-sort = "DATE_CREATE" data-method ="desc"><?=Loc::getMessage("SORT_DATE_DESC");?></a>
+    <a class="active button-sort" data-sort = "DATE_CREATE" data-method ="asc"><?=Loc::getMessage("SORT_DATE_ASC");?></a>
 </p>
-<div class="news-list">
+<div  id ="refreshlist" class="news-list">
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?><br />
 <?endif;?>
@@ -43,4 +38,6 @@ Loc::loadMessages(__FILE__);//фильтрация по алфавиту и по
 	<br /><?=$arResult["NAV_STRING"]?>
 <?endif;?>
 </div>
+
+
 
