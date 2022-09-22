@@ -9,7 +9,7 @@
 
 Создан инфоблок с новостями, разбитый по разделам, находится по пути [/local/php_interface/migrations](https://github.com/TMariaA/testovoe_chipsa/tree/main/local/php_interface/migrations) (его можно установить с помощью [модуля миграции](https://marketplace.1c-bitrix.ru/solutions/sprint.migration/) (он бесплатен)) или установить инфоблок через xml файл [/testovoe_chipsa/tree/main/upload](https://github.com/TMariaA/testovoe_chipsa/tree/main/upload) (но xml файл,созданный средствами битрикс, передает инфоблок через ай ди, следовательно можно перезаписать уже существующий!)
 
-меню, построенное по разделам находится (компонент) [/testovoe_chipsa/tree/main/local/components/test/menu_section](https://github.com/TMariaA/testovoe_chipsa/tree/main/local/components/test/menu_section)
+меню, построенное по разделам (компонент) находится  [/testovoe_chipsa/tree/main/local/components/test/menu_section](https://github.com/TMariaA/testovoe_chipsa/tree/main/local/components/test/menu_section)
 
 фильтр новостей, ЧПУ проверяются через подключение компонента в index.php. ЧПУ должен совпадать с настройками инфоблока(поэтому проверяется и в настройках инфоблока)
 
