@@ -1,13 +1,13 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-\Bitrix\Main\Loader::includeModule('iblock');//подключение модуля для того, чтобы не хардкодить по айдишнику
+\Bitrix\Main\Loader::includeModule('iblock');//подключение модуля ИБ
 global $APPLICATION;
 $APPLICATION->SetTitle("");
 $sortField = 'ID'; // поле сортировки по умолчанию
 $sortOrder = 'ASC'; // направление сортировки по умолчанию
 $iblockType = "chipsa_test_news"; // тип инфоблока
 $iblockCode= "chipsa_test_news"; // код инфоблока
-$iblockId = \Bitrix\Iblock\IblockTable::getList(['filter'=>['CODE'=>$iblockCode]])->Fetch()["ID"]; // получаем Id для комплексного компонента
+$iblockId = \Bitrix\Iblock\IblockTable::getList(['filter'=>['CODE'=>$iblockCode]])->Fetch()["ID"]; // получаем Id для комплексного компонента через код ИБ для того, чтобы не хардкодить по айдишнику
 ?>
 <?$APPLICATION->IncludeComponent("test:menu_section", ".default",// подключение меню по разделам
     [
