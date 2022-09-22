@@ -2,3 +2,11 @@ div.news-list
 {
 	word-wrap: break-word;
 }
+.sort{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.sort a{
+	cursor: pointer;
+}
